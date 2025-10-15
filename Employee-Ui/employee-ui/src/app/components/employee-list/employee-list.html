@@ -1,0 +1,42 @@
+<div class="container mt-5">
+  <div class="card shadow-sm">
+    <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+      <h2 class="mb-0">Employee List</h2>
+      <button routerLink="/add" class="btn btn-light btn-sm">Add Employee</button>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover align-middle">
+          <thead class="table-primary">
+            <tr>
+              <th>ID</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+              <th>Contact</th>
+              <th>City</th>
+              <th>Address</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let emp of employees()">
+              <td>{{ emp.empId }}</td>
+              <td>{{ emp.firstName }}</td>
+              <td>{{ emp.lastName }}</td>
+              <td>{{ emp.email }}</td>
+              <td>{{ emp.contactNo }}</td>
+              <td>{{ emp.city }}</td>
+              <td>{{ emp.address }}</td>
+              <td>
+                <button class="btn btn-info btn-sm me-1" [routerLink]="['/details', emp.empId]">View</button>
+                <button class="btn btn-warning btn-sm me-1" [routerLink]="['/edit', emp.empId]">Edit</button>
+                <button class="btn btn-danger btn-sm" [routerLink]="['/delete', emp.empId]">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

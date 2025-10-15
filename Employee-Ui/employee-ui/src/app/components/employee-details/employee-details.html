@@ -1,0 +1,17 @@
+<div class="container mt-4" *ngIf="employee">
+  <div class="card shadow-sm">
+    <div class="card-header bg-primary text-white">
+      <h2>Employee Details</h2>
+    </div>
+    <div class="card-body">
+
+      <p><strong>ID:</strong> {{employee.empId}}</p>
+      <p><strong>Name:</strong> {{employee.firstName}} {{employee.lastName}}</p>
+      <p><strong>Email:</strong> {{employee.email}}</p>
+      <p><strong>Contact:</strong> {{employee.contactNo}}</p>
+      <p><strong>City:</strong> {{employee.city}}</p>
+      <p><strong>Address:</strong> {{employee.address}}</p>
+      <button class="btn btn-secondary" (click)="goBack()">Back</button>
+    </div>
+  </div>
+</div>

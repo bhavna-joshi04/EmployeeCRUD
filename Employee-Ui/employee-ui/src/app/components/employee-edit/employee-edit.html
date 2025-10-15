@@ -1,0 +1,116 @@
+<div class="container mt-5">
+  <div class="card shadow-lg border-0 rounded-4">
+    <div class="card-header bg-primary text-white rounded-top-4">
+      <h3 class="mb-0 text-center">✏️ Edit Employee Details</h3>
+    </div>
+
+    <div class="card-body p-4 bg-light">
+      <form (ngSubmit)="onSubmit()" #editForm="ngForm" novalidate>
+
+        <!-- Row 1 -->
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="firstName" class="form-label fw-semibold">First Name</label>
+            <input
+              type="text"
+              id="firstName"
+              class="form-control form-control-lg"
+              required
+              [(ngModel)]="employee.firstName"
+              name="firstName"
+              #firstName="ngModel"
+              placeholder="Enter first name" />
+            <div *ngIf="firstName.invalid && firstName.touched" class="text-danger small mt-1">
+              First Name is required.
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="lastName" class="form-label fw-semibold">Last Name</label>
+            <input
+              type="text"
+              id="lastName"
+              class="form-control form-control-lg"
+              required
+              [(ngModel)]="employee.lastName"
+              name="lastName"
+              #lastName="ngModel"
+              placeholder="Enter last name" />
+            <div *ngIf="lastName.invalid && lastName.touched" class="text-danger small mt-1">
+              Last Name is required.
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="email" class="form-label fw-semibold">Email</label>
+            <input
+              type="email"
+              id="email"
+              class="form-control form-control-lg"
+              [(ngModel)]="employee.email"
+              name="email"
+              placeholder="Enter email" />
+          </div>
+
+          <div class="col-md-6">
+            <label for="contactNo" class="form-label fw-semibold">Contact Number</label>
+            <input
+              type="text"
+              id="contactNo"
+              class="form-control form-control-lg"
+              required
+              maxlength="10"
+              minlength="10"
+              [(ngModel)]="employee.contactNo"
+              name="contactNo"
+              #contactNo="ngModel"
+              placeholder="10-digit number" />
+            <div *ngIf="contactNo.invalid && contactNo.touched" class="text-danger small mt-1">
+              Contact Number must be 10 digits.
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="city" class="form-label fw-semibold">City</label>
+            <input
+              type="text"
+              id="city"
+              class="form-control form-control-lg"
+              [(ngModel)]="employee.city"
+              name="city"
+              placeholder="Enter city" />
+          </div>
+
+          <div class="col-md-6">
+            <label for="address" class="form-label fw-semibold">Address</label>
+            <textarea
+              id="address"
+              class="form-control form-control-lg"
+              rows="3"
+              [(ngModel)]="employee.address"
+              name="address"
+              placeholder="Enter full address"></textarea>
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="text-center mt-4">
+          <button type="submit" class="btn btn-success btn-lg px-4" [disabled]="editForm.invalid">
+            💾 Update
+          </button>
+          <button type="button" class="btn btn-outline-secondary btn-lg px-4 ms-2"
+            (click)="router.navigate(['/'])">
+            ✖️ Cancel
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

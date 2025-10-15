@@ -1,0 +1,22 @@
+<div class="container mt-5">
+  <div class="card shadow-sm mx-auto" style="max-width: 500px;">
+    <div class="card-body text-center">
+      <h4 class="card-title text-danger">Confirm Delete</h4>
+
+      <div *ngIf="employee">
+        <p>Are you sure you want to delete this employee?</p>
+        <h5>{{ employee.firstName }} {{ employee.lastName }}</h5>
+        <p class="text-muted">{{ employee.email }}</p>
+
+        <div class="mt-4">
+          <button class="btn btn-danger me-3" (click)="confirmDeleteEmployee()">Yes, Delete</button>
+          <button class="btn btn-secondary" (click)="cancel()">Cancel</button>
+        </div>
+      </div>
+
+      <div *ngIf="!employee">
+        <p>Loading employee details...</p>
+      </div>
+    </div>
+  </div>
+</div>

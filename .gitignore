@@ -1,0 +1,23 @@
+# .NET Core
+bin/
+obj/
+*.user
+*.suo
+*.vs/
+
+# Visual Studio
+.vs/
+*.vscode/
+
+# Angular / Node
+node_modules/
+dist/
+npm-debug.log
+yarn-error.log
+
+# SQL
+*.mdf
+*.ldf
+
+# User secrets
+secrets.json
