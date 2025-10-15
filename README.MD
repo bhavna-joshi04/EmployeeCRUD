@@ -27,7 +27,7 @@ A full-stack CRUD application built with **ASP.NET Core Web API**, **Angular**, 
 
 EmployeeCRUD/               <-- root folder (Git repository)
  ├── Employee.Api/           --> .NET Core Web API project
- ├── EmployeeUI/employee-ui --> Angular frontend
+ ├── Employee-Ui/employee-ui --> Angular frontend
  ├── EmployeeDb.sql         --> database creation script
  ├── Employee.Api.sln       --> Visual Studio solution
  ├── .gitignore
@@ -44,8 +44,8 @@ EmployeeCRUD/               <-- root folder (Git repository)
 
 ```json
 "ConnectionStrings": {
-  "DefaultConnection": "Server=.;Database=EmployeeDB;Trusted_Connection=True;"
-}
+    "DefaultConnection": "Server=YOUR_SERVER_NAME;Database=EmployeeMaster;User Id=YOUR_DB_USER;Password=YOUR_DB_PASSWORD;"
+  },
 
 Run the Web API project (F5 or dotnet run).
 
