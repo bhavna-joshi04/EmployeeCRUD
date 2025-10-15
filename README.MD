@@ -27,7 +27,7 @@ A full-stack CRUD application built with **ASP.NET Core Web API**, **Angular**, 
 
 EmployeeCRUD/               <-- root folder (Git repository)
  ├── Employee.Api/           --> .NET Core Web API project
- ├── EmployeeUI/employee-ui --> Angular frontend
+ ├── Employee-Ui/employee-ui --> Angular frontend
  ├── EmployeeDb.sql         --> database creation script
  ├── Employee.Api.sln       --> Visual Studio solution
  ├── .gitignore
